@@ -1,0 +1,12 @@
+.carousel img {
+    max-height: 550px; /* Adjust as needed */
+    object-fit: cover;
+    /* filter: blur(0.5px); */
+  }
+  hr{
+    color: black;
+  }
+
+.wi{
+    width:100%;
+  }

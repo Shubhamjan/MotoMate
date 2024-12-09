@@ -1,0 +1,125 @@
+/* Login.css */
+
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #224156;
+}
+
+/* Container Styling */
+.container {
+    margin-top: 50px;
+    width: 200px;
+}
+
+/* Card Styling */
+.card {
+    /* border-radius: 10px; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 1.0); */
+    /* background: #b3cbcc; */
+    background: #b3cbcc;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    /* border: solid; */
+}
+
+/* Card Body */
+.card-body {
+    padding: 30px;
+    background-color: #b3cbcc;
+}
+
+/* Image Styling */
+.login-image {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 500px;
+    object-fit:cover;
+}
+
+/* Form Title */
+.titl {
+    font-size: 45px;
+    font-weight: bolder;
+    color: #ffffff;
+    background-color: rgb(21, 126, 93);
+    text-align: center;
+    margin-bottom: 4px;
+}
+.titl h2{
+    font-family: 'Times New Roman', Times, seri;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Radio Buttons */
+.form-check-inline {
+    margin-right: 20px;
+}
+
+/* Submit Button */
+.btn-block {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #52a44f;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    width: 80x;
+    transition: background-color 0.3s ease;
+}
+
+.btn-block:hover {
+    background-color: #0056b3;
+}
+
+.btn-block:disabled {
+    background-color: #cccccc;
+}
+
+/* Toast Notifications */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .login-image {
+        display: none;
+    }
+
+    .col-md-7 {
+        width: 100%;
+    }
+
+    .col-md-5 {
+        display: none;
+    }
+}
+.forgot-password-link {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1.0rem;
+    font-weight: bold;
+  }
+  
+  .forgot-password-link:hover {
+    text-decoration: underline;
+  }
+  
