@@ -87,5 +87,7 @@ Both Admins and Customers can view updated statuses and details at any time.
 4. **Cash Payment Mode:** In addition to wallet payments, customers can pay via cash.  
 
 ---
+## Screenshots
+![Screenshot (146)](https://github.com/user-attachments/assets/3aae5a9f-3ca4-4c16-ae3f-387289657feb)
 
 
