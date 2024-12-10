@@ -1,6 +1,6 @@
-# Online Bike Service Booking System
+# MotoMate
 
-The **Online Bike Service Booking System** is a software solution that allows customers to book servicing appointments for their bikes, manage their bookings, and handle payments through a wallet or cash mode. The system provides functionalities for both **Administrators** and **Customers** to manage and streamline the bike servicing process efficiently.
+The **MotoMate** is a software solution that allows customers to book servicing appointments for their bikes, manage their bookings, and handle payments through a wallet or cash mode. The system provides functionalities for both **Administrators** and **Customers** to manage and streamline the bike servicing process efficiently.
 
 ---
 
@@ -60,7 +60,7 @@ The system includes two main user modules:
 
 ## Project Overview  
 
-The **Online Bike Service Booking System** allows customers to add their bikes, manage wallets, and book servicing appointments. Admins manage customer bookings, approve or reject appointments, and update servicing statuses post-service completion.
+The **MotoMate** allows customers to add their bikes, manage wallets, and book servicing appointments. Admins manage customer bookings, approve or reject appointments, and update servicing statuses post-service completion.
 
 ### Workflow:
 1. **Customer Actions:**  
