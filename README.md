@@ -102,18 +102,29 @@ Both Admins and Customers can view updated statuses and details at any time.
    git clone https://github.com/username/repo.git
 
 2.Backend Setup:
+
    Navigate to the backend directory
+   
    cd backend
    Configure the database in application.properties.
+   
    Build and run the application:
 
 3.Frontend Setup
+
    Navigate to the frontend directory
+   
    cd frontend
+   
    Install dependencies
+   
    npm install
+   
    Start the development server
+   
    npm start
+   
 4.Access the application in your browser at
+
    http://localhost:3000
 
