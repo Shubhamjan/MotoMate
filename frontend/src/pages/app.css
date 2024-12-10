@@ -1,0 +1,119 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.nav-links button {
+  margin-top: 0.05px;
+  background-color: #ff6347;
+}
+
+/* Navbar container */
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #0fc2c8, #00a5a5);
+  padding: 5px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  white-space: nowrap; /* Prevent wrapping of elements */
+  overflow: hidden; /* Hide overflow if it exceeds the container width */
+}
+
+/* Logo and app name styling */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.app-name {
+  font-family: 'Times New Roman', Times, serif;
+  font-variant: small-cap;
+  font-size: 2.5rem;
+  color: #121048;
+  font-weight: bolder;
+  letter-spacing: 1.5px;
+  animation: fadeSlideUp 2s ease-in-out;
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Navigation links styling */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.nav-links li {
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin: 10px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff6347;
+  transform: scale(1.1);
+  font-size: 1.5rem;
+}
+
+/* Maintain fixed proportions for all screen sizes */
+.navbar, .logo-container, .nav-links {
+  flex-shrink: 0; /* Prevent shrinking of elements */
+}
+
+.navbar {
+  min-width: 1000px; /* Set a minimum width for the navbar */
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+}
+
+img {
+  margin-left: 2px;
+}
+
+/* Responsive adjustments (optional for scaling but consistent layout) */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-evenly;
+    min-width: auto; /* Allow resizing but maintain consistency */
+  }
+
+  .nav-links li {
+    font-size: 1.2rem;
+  }
+
+  .app-name {
+    font-size: 2rem;
+  }
+}

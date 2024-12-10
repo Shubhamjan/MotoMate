@@ -1,0 +1,32 @@
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+    margin-left: 20px;
+    /* background-color: bisque; */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    transform: translateY(5px);
+  }
+  
+  .card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .ctitle{
+    background-color: rgb(28, 2, 2);
+    color: rgb(116, 164, 163);
+    /* font-size: 30px; */
+  }
+  .text{
+    /* background-color: blanchedalmond; */
+    font-size: large;
+    font-family: cursive;
+    text-align: left;
+  }
+  .btn{
+    background-color:rgb(44, 162, 158) ;
+  }
+  

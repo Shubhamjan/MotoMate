@@ -1,0 +1,15 @@
+/* Navbar Styling */
+.navbar {
+    margin-bottom: 20px;
+}
+
+/* Logout Button */
+.btn-danger {
+    font-size: 14px;
+    padding: 8px 15px;
+}
+
+/* Main Content */
+.container {
+    margin-top: 30px;
+}

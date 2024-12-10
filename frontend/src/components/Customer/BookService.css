@@ -1,0 +1,117 @@
+/* General Styling */
+body {
+    background-color: #f4f6f9; /* Light grey background */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the card */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 15px;
+}
+
+/* Card Styling */
+.card {
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    /* background: linear-gradient(to bottom, #ffffff, #f8f9fa); */
+}
+
+/* .card-body {
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden
+} */
+
+/* Card Title */
+.card-title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(21, 126, 93);
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif
+}
+
+/* Form Styling */
+form {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #495057;
+    margin-bottom: 5px;
+}
+
+input, select {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+}
+
+/* Button Styling */
+.bt {
+    background-color: #52a44f;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.bt:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+/* Divider */
+.card-divider {
+    height: 1px;
+    background-color: #ddd;
+    margin: 20px 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 576px) {
+    .card-body {
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
