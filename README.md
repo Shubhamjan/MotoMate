@@ -109,6 +109,19 @@ Login
 
 ![Screenshot (151)](https://github.com/user-attachments/assets/9914a4fb-545f-4d0a-be57-13db967ce52e)
 
+My Profile
+
+![Screenshot (152)](https://github.com/user-attachments/assets/9e744fbd-d4de-4ed4-abc2-f6ecf071ebd1)
+
+Add new Bike
+
+![Screenshot (153)](https://github.com/user-attachments/assets/7427ef31-ca36-4482-9401-6cd3bf5f8b8f)
+
+Your Bikes
+
+![Screenshot (154)](https://github.com/user-attachments/assets/85f0d6bc-aaee-433a-84a6-3828cba75d3b)
+
+
 
 
 
