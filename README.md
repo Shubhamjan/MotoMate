@@ -89,9 +89,29 @@ Both Admins and Customers can view updated statuses and details at any time.
 ---
 ## Screenshots
 
-#Home Page
+Home Page
 
 ![Screenshot (146)](https://github.com/user-attachments/assets/3aae5a9f-3ca4-4c16-ae3f-387289657feb)
+
+Products
+
+![Screenshot (147)](https://github.com/user-attachments/assets/3e680a81-48ec-488f-b4e6-07babe93abda)
+
+About
+
+![Screenshot (149)](https://github.com/user-attachments/assets/75edf568-c598-42dd-8fad-8fabfb187c6f)
+
+Registration
+
+![Screenshot (150)](https://github.com/user-attachments/assets/f4bd797d-dae3-4470-b33a-d31b8c179a07)
+
+Login
+
+![Screenshot (151)](https://github.com/user-attachments/assets/9914a4fb-545f-4d0a-be57-13db967ce52e)
+
+
+
+
 
 
 
