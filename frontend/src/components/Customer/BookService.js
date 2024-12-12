@@ -68,7 +68,7 @@ const BookService = () => {
       <Card className="">
         <CardBody>
           <CardTitle tag="h4" className="card-title">
-            Book a Bike
+            Book a Service
           </CardTitle>
           <Form onSubmit={handleBookBike}>
             <FormGroup>
