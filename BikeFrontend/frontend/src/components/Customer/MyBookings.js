@@ -22,6 +22,7 @@ const MyBookings = () => {
 
       try {
         const response = await axios.get(`${BASE_URL}/v1/booking/get/${userId}`);
+        // const response = await axios.get(`${BASE_URL}/v1/user/get/${userId}`);
         setBookings(response.data);
         setLoading(false);
       } catch (error) {

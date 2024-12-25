@@ -1,0 +1,45 @@
+bike-service-booking-app/
+├── public/
+│   ├── index.html
+│   └── favicon.ico
+├── src/
+│   ├── assets/                // For images, fonts, and other static assets
+│   ├── components/            // Reusable components
+│   │   ├── Header.js
+│   │   ├── Footer.js
+│   │   ├── Sidebar.js
+│   │   ├── Bike/
+│   │   │   ├── BikeList.js
+│   │   │   ├── BikeDetails.js
+│   │   ├── Booking/
+│   │   │   ├── BookingList.js
+│   │   │   ├── BookingDetails.js
+│   │   ├── Service/
+│   │   │   ├── ServiceList.js
+│   │   │   ├── ServiceDetails.js
+│   │   ├── Wallet/
+│   │   │   ├── WalletBalance.js
+│   │   │   ├── WalletTransactions.js
+│   │   └── Customer/
+│   │       ├── CustomerList.js
+│   │       └── CustomerDetails.js
+│   ├── pages/                 // Main pages/routes for the app
+│   │   ├── HomePage.js
+│   │   ├── BookingPage.js
+│   │   ├── ServicePage.js
+│   │   └── CustomerPage.js
+│   ├── services/              // API calls and service logic
+│   │   ├── bikeService.js
+│   │   ├── bookingService.js
+│   │   ├── serviceService.js
+│   │   ├── walletService.js
+│   │   └── customerService.js
+│   ├── App.js                 // Main app component
+│   ├── index.js               // Main entry point
+│   ├── routes.js              // App routing
+│   ├── styles/                // Global styles
+│   │   ├── main.css
+│   │   └── variables.css
+│   └── utils/                 // Utility functions
+│       └── helpers.js
+└── package.json

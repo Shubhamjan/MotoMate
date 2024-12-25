@@ -38,7 +38,6 @@ public class AdminController {
 	private AdminService adminService;
 
 	@PostMapping("/login")
-	@PreAuthorize("hasRole('ADMIN')")
 	public ResponseEntity<LoginResponseDto> login(@RequestBody LoginDto login) {
 		LoginResponseDto b = adminService.verifyAdmin(login);
 		if (b != null) {
@@ -49,14 +48,12 @@ public class AdminController {
 	}
 
 	@GetMapping("/customers")
-	@PreAuthorize("hasRole('ADMIN')")
 	public ResponseEntity<List<UserDto>> getCustomers() {
 		List<UserDto> lst = adminService.getCustomers();
 		return new ResponseEntity<List<UserDto>>(lst, HttpStatus.ACCEPTED);
 	}
 
 	@GetMapping("/bikes")
-	@PreAuthorize("hasRole('ADMIN')")
 	public ResponseEntity<List<BikeWithCustDto>> getBikes() {
 		List<BikeWithCustDto> lst = adminService.getBikes();
 		return new ResponseEntity<List<BikeWithCustDto>>(lst, HttpStatus.ACCEPTED);
@@ -73,7 +70,6 @@ public class AdminController {
 //	}
 
 	@PutMapping("/update")
-	@PreAuthorize("hasRole('ADMIN')")
 	public ResponseEntity<String> updateBooking(@RequestBody UpdateBooking up) {
 		boolean flag = adminService.updateBookings(up);
 		if (flag) {
@@ -84,7 +80,6 @@ public class AdminController {
 	}
 
 	@PutMapping("/update/serviceStatus")
-	@PreAuthorize("hasRole('ADMIN')")
 	public ResponseEntity<String> updateServiceStatus(@RequestBody ServiceStatusDto sd) {
 		boolean flag = adminService.updateServiceStatus(sd);
 		if (flag) {
@@ -95,7 +90,6 @@ public class AdminController {
 	}
 
 	@PutMapping("/update/bookingStatus")
-	@PreAuthorize("hasRole('ADMIN')")
 	public ResponseEntity<String> updateBookingStatus(@RequestBody BookingStatusDto sd) {
 		boolean flag = adminService.updateBookingStatus(sd);
 		if (flag) {
@@ -106,7 +100,6 @@ public class AdminController {
 	}
 
 	@PutMapping("/update/paymentStatus")
-	@PreAuthorize("hasRole('ADMIN')")
 	public ResponseEntity<String> updatePaymentStatus(@RequestBody PaymentStatusDto sd) {
 		boolean flag = adminService.updatePaymentStatus(sd);
 		if (flag) {
@@ -117,7 +110,6 @@ public class AdminController {
 	}
 
 	@PutMapping("/transaction")
-@PreAuthorize("hasRole('ADMIN')")
 	public ResponseEntity<String> withdrawMoney(@RequestBody WalletTransactionDto w) {
 		Boolean flag = adminService.withDrawMoney(w);
 		if (flag) {

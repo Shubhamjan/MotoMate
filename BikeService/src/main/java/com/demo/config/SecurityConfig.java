@@ -7,6 +7,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -46,7 +47,12 @@ public class SecurityConfig {
 		http
         .csrf().disable() // Disable CSRF for testing (or specifically for /user/register)
         .authorizeRequests()
-            .requestMatchers("/user/**").permitAll()  // Open registration endpoint
+            .requestMatchers("/admin/login").hasRole("ADMIN")  // Open registration endpoint
+            .requestMatchers("/admin/**").hasRole("ADMIN")
+            .requestMatchers("/booking/getAll").hasRole("ADMIN")
+            .requestMatchers("/user/**").hasRole("USER")
+            .requestMatchers("/booking/bikebook").hasRole("USER")
+            .requestMatchers("booking/cancel/**").hasRole("USER")
             .anyRequest().permitAll()  // Secure other endpoints
         .and();
 //        .httpBasic(); // Use HTTP Basic Authentication for now

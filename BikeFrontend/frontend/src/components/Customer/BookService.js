@@ -110,7 +110,7 @@ const BookService = () => {
               </Input>
             </FormGroup>
             <Button className="bt">
-              Book Bike
+              Book Bike Service
             </Button>
           </Form>
         </CardBody>

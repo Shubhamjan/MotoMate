@@ -39,14 +39,12 @@ public class BookingController {
 	private StatusService service;
 
 	@PostMapping("/bikebook")
-	@PreAuthorize("hasRole('USER')")
 	public ResponseEntity<BookingBikeDto> bookService(@RequestBody BookingBikeDto b) {
 		BookingBikeDto bt = bikeService.bookBike(b);
 		return new ResponseEntity<BookingBikeDto>(bt, HttpStatus.ACCEPTED);
 	}
 
 	@GetMapping("/get/{id}")
-	@PreAuthorize("hasRole('USER')")
 	public ResponseEntity<List<UserBookings>> getBookings(@PathVariable Long id) {
 		List<UserBookings> ub = bikeService.getBookings(id);
 		if (ub != null) {
@@ -58,7 +56,6 @@ public class BookingController {
 	}
 
 	@GetMapping("/getAll")
-	@PreAuthorize("hasRole('ADMIN')")
 	public ResponseEntity<List<AllBookingDto>> getAllBookings() {
 		List<AllBookingDto> ub = bikeService.getAllBookings();
 		
@@ -78,14 +75,12 @@ public class BookingController {
 	
 	
 	@GetMapping("/get/status/{bid}")
-	@PreAuthorize("hasRole('ADMIN')")
 	public ResponseEntity<String> getCurrentBookingStatus(@PathVariable Long bid) {
 		String status = service.getCurrentBookingStatus(bid);
 		return new ResponseEntity<String>(status, HttpStatus.OK);
 	}
 
 	@GetMapping("/get/date/{bid}")
-	@PreAuthorize("hasRole('ADMIN')")
 	public ResponseEntity<LocalDate> getBookedDate(@PathVariable Long bid) {
 		LocalDate d = service.getBookedDate(bid);
 		if (d != null) {
@@ -96,7 +91,6 @@ public class BookingController {
 	}
 	
 	@PutMapping("/cancel/{status}/{id}")
-	@PreAuthorize("hasRole('USER')")
 	public ResponseEntity<String> cancelooking(@PathVariable String status,@PathVariable Long id){
 		boolean flag=bikeService.cancelBooking(status,id);
 		System.out.println(status+"  "+id);

@@ -1,5 +1,6 @@
 package com.demo.controller;
 
+import java.util.Comparator;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,8 +27,10 @@ import com.demo.dto.WalletDto;
 import com.demo.entities.Bike;
 import com.demo.entities.User;
 import com.demo.exception.BikeCheckException;
+import com.demo.exception.NoBookingFoundException;
 import com.demo.exception.UserNotFoundException;
 import com.demo.exception.WalletNotFoundException;
+import com.demo.service.BikeService;
 import com.demo.service.UserService;
 import com.demo.service.WalletService;
 
@@ -42,8 +45,10 @@ public class UserController {
 	@Autowired
 	WalletService walletService;
 
+	@Autowired
+	BikeService bikeService;
+	
 	@PostMapping("/register")
-	@PreAuthorize("hasRole('ADMIN') or hasRole('USER')")
 	public ResponseEntity<UserDto> register(@RequestBody User user) {
 		System.out.println(user);
 		UserDto u = userService.register(user);
@@ -51,7 +56,6 @@ public class UserController {
 	}
 
 	@PostMapping("/login")
-	@PreAuthorize("hasRole('USER')")
 	public ResponseEntity<LoginResponseDto> login(@RequestBody LoginDto ld) {
 		LoginResponseDto b = userService.verify(ld);
 		if (b != null) {
@@ -62,7 +66,6 @@ public class UserController {
 	}
 
 	@PostMapping("/addBike/{id}")
-	@PreAuthorize("hasRole('USER')")
 	public ResponseEntity<BikeDto> addBike(@RequestBody Bike b, @PathVariable Long id) {
 		BikeDto bt = userService.addBike(b, id);
 		if (bt != null) {
@@ -74,14 +77,12 @@ public class UserController {
 	}
 
 	@GetMapping("/bikes/{id}")
-	@PreAuthorize("hasRole('USER')")
 	public ResponseEntity<List<BikesDto>> allBikes(@PathVariable Long id) {
 		List<BikesDto> bikes = userService.allBikes(id);
 		return new ResponseEntity<List<BikesDto>>(bikes, HttpStatus.ACCEPTED);
 	}
 
 	@PostMapping("/addMoney/{id}/{money}")
-	@PreAuthorize("hasRole('USER')")
 	public ResponseEntity<String> addMoneyToWallet(@PathVariable Long id, @PathVariable double money) {
 		boolean flag = walletService.addMoneyToWallet(id, money);
 		if (flag) {
@@ -92,7 +93,6 @@ public class UserController {
 	}
 
 	@GetMapping("/getWallet/{id}")
-	@PreAuthorize("hasRole('USER')")
 	public ResponseEntity<WalletDto> getMyWallet(@PathVariable Long id) {
 		try {
 			WalletDto w = walletService.getMyWallet(id);
@@ -103,7 +103,6 @@ public class UserController {
 	}
 
 	@GetMapping("/getProfile/{id}")
-	@PreAuthorize("hasRole('USER')")
 	public ResponseEntity<ProfileDto> getProfile(@PathVariable Long id) {
 		ProfileDto dt = userService.getProfile(id);
 		if (dt != null) {
@@ -115,10 +114,10 @@ public class UserController {
 	}
 
 	@GetMapping("/getId/{email}")
-	@PreAuthorize("hasRole('USER')")
 	public ResponseEntity<Long> getUserId(@PathVariable String email) {
 		Long id = userService.getUserId(email);
 		return new ResponseEntity<Long>(id, HttpStatus.OK);
 	}
+	
 
 }

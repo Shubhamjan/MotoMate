@@ -70,6 +70,8 @@ const AppContent = () => {
            <Route path="/about" element={<About/>}/>
           <Route path="/care" element={<Maintenance/>}/> 
           <Route path="/reset" element={<ResetPassword/>}/>
+         
+
         </Routes>
       </div>
 

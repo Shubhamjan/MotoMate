@@ -61,3 +61,28 @@
     font-weight: bolder;
     color: black;
   }
+
+  .mobile-update-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.mobile-number {
+    margin-top: -600;
+    flex: 1;
+}
+
+.update-button {
+    margin-left: 2px;
+    white-space: nowrap;
+    width: 150px;
+    height: 35px;
+    background-color: #16af28;
+    color: #e9ecef;
+    font-weight: bold;
+}
+.update-button:hover{
+  background-color: #1866ab;
+}
